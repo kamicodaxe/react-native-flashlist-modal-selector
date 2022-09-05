@@ -1,6 +1,6 @@
 import React from 'react';
 import { ViewStyle, TextStyle } from 'react-native';
-import { FlashListProps } from "@shopify/flash-list";
+import { FlashListProps } from "../@shopify/flash-list";
 
 export interface IOption {
     key: React.Key;
