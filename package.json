@@ -26,7 +26,6 @@
     "react-component"
   ],
   "dependencies": {
-    "@shopify/flash-list": "^1.2.1",
     "prop-types": "^15.5.10"
   },
   "author": "Daniel Korger <dan@imake.io>",
