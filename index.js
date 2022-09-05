@@ -11,7 +11,7 @@ import {
     TouchableOpacity,
     TouchableWithoutFeedback,
 } from 'react-native';
-import { FlashList } from "@shopify/flash-list";
+import { FlashList } from "../@shopify/flash-list";
 
 import styles from './style';
 
