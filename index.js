@@ -7,11 +7,11 @@ import {
     View,
     Modal,
     Text,
-    FlatList,
     ScrollView,
     TouchableOpacity,
     TouchableWithoutFeedback,
 } from 'react-native';
+import { FlashList } from "@shopify/flash-list";
 
 import styles from './style';
 
@@ -27,7 +27,8 @@ const propTypes = {
     visible:                        PropTypes.bool,
     closeOnChange:                  PropTypes.bool,
     initValue:                      PropTypes.string,
-    listType:                       PropTypes.oneOf(['SCROLLVIEW', 'FLATLIST']),
+    listType:                       PropTypes.oneOf(['SCROLLVIEW', 'FLASHLIST']),
+    estimatedItemSize:              PropTypes.number,
     animationType:                  PropTypes.oneOf(['none', 'slide', 'fade']),
     style:                          PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
     selectStyle:                    PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
@@ -314,14 +315,15 @@ export default class ModalSelector extends React.Component {
                 <View style={[styles.overlayStyle, overlayStyle]}>
                     <View style={[styles.optionContainer, optionContainerStyle]}>
                         {header}
-                        {listType === 'FLATLIST'?
-                            <FlatList
+                        {listType === 'FLASHLIST'?
+                            <FlashList
                                 data={data}
                                 keyboardShouldPersistTaps={keyboardShouldPersistTaps}
                                 accessible={scrollViewAccessible}
                                 accessibilityLabel={scrollViewAccessibilityLabel}
                                 keyExtractor={this.props.keyExtractor}
                                 renderItem={this.renderFlatlistOption}
+                                estimatedItemSize={estimatedItemSize}
                             />
                             :
                             <ScrollView

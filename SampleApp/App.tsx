@@ -99,13 +99,13 @@ export const SampleApp = () => {
         }
       />
 
-      {/* Default mode: a clickable button will re rendered with FlatList */}
+      {/* Default mode: a clickable button will re rendered with FlashList */}
       <ModalSelector
         data={countryList}
-        listType="FLATLIST"
+        listType="FLASHLIST"
         keyExtractor={(x) => x.name}
         labelExtractor={(x) => x.name}
-        initValue="listType with FlatList"
+        initValue="listType with FlashList"
         initValueTextStyle={{ color: "black" }}
         selectStyle={{ borderColor: "black" }}
         selectTextStyle={{ color: "blue" }}
@@ -115,12 +115,12 @@ export const SampleApp = () => {
         componentExtractor={(option) => <ListItem data={option} />}
       />
 
-      {/* Default mode: a clickable button will re rendered without FlatList */}
+      {/* Default mode: a clickable button will re rendered without FlashList */}
       <ModalSelector
         data={countryList}
         keyExtractor={(x) => x.name}
         labelExtractor={(x) => x.name}
-        initValue="listType without FlatList"
+        initValue="listType without FlashList"
         initValueTextStyle={{ color: "black" }}
         selectStyle={{ borderColor: "black" }}
         selectTextStyle={{ color: "blue" }}
@@ -135,7 +135,7 @@ export const SampleApp = () => {
         data={countryList}
         keyExtractor={(x) => x.name}
         labelExtractor={(x) => x.name}
-        initValue="listType without FlatList but fixed header"
+        initValue="listType without FlashList but fixed header"
         initValueTextStyle={{ color: "black" }}
         selectStyle={{ borderColor: "black" }}
         selectTextStyle={{ color: "blue" }}
